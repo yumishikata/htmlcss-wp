@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Cinzel', serif;
+
+}
+
 .float_main::after {
   content: '';
   display: table;
@@ -16,35 +21,82 @@
 }
 
 header {
-  height: 10vh;
-  background-color: pink;
-  margin: 2vh 0;
+  height: 12vh;
+  margin-bottom: 2vh;
 }
-
-.primo_blocco {
+header img{
+  height: 50%;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  line-height: 6vh;
+  padding-right: 1%;
+}
+li a {
+  text-decoration: none;
+  font-size: 10px;
+  color: grey;
+}
+.slider {
   margin: 2vh 0;
   height: 31vh;
+  width: 100%;
   background-color: gold;
+  border-radius: 10px;
+  background-image: url(../img/banner.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+
+.slider , .image {
+  position: relative;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.scritta_image {
+  width: 70%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: white;
+}
+.scritta_image p {
+  font-size: 10px;
 }
 
 .secondo_blocco {
-  height: 45vh;
-  background-color: blue;
+  min-height: 45vh;
 }
 .header_main {
-  height: 10vh;
-  background-color: lightblue;
+  min-height: 10vh;
+}
+
+.header_main h1{
+  font-size: 20px;
+}
+.header_main p {
+  color: grey;
+  line-height: 2vh;
+  font-size: 10px;
 }
 
 .float_main {
-    height: 32vh;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
+  min-height: 32vh;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
 }
 .colonna {
   height: 100%;
   float: left;
-  background-color: lightblue;
 }
 
 .left , .right {
@@ -56,11 +108,43 @@ header {
   margin: 0 1%;
 }
 
+.image {
+  height: 15vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.img_left {
+  background-image: url(../img/img-1.jpg);
+}
+.img_middle {
+  background-image: url(../img/banner-2.jpg);
+}
+.img_right {
+  background-image: url(../img/img-3.jpg);
+}
 
+.colonna h4 {
+  font-size: 12px;
+  color: grey;
+  padding: 2vh 0;
+}
+.colonna p {
+  font-size: 10px;
+  color: lightgrey;
+
+}
 footer {
   margin-top: 1vh;
   margin-bottom: 2vh;
-  height: 5vh;
-  background-color: violet;
+  min-height: 5vh;
+  text-align: center;
+  font-size: 10px;
+}
 
+footer p::after {
+  content: ' \2665';
+  color: red;
 }
